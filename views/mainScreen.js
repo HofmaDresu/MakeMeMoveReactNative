@@ -14,7 +14,7 @@ const TabStack = TabNavigator({
     navigationOptions: ({navigation}) =>({
         tabBarIcon: ({tintColor}) => {
             const { routeName } = navigation.state;
-            const iconName = routeName === "MySchedule" ? "calendar" : "navicon";
+            const iconName = routeName === "MySchedule" ? "calendar" : "list";
             return (<Icon name={iconName} size={25} color={tintColor} />);
         },
     }),

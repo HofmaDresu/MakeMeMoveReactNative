@@ -3,7 +3,7 @@ import React from 'react';
 import {  TabNavigator, TabBarBottom } from 'react-navigation';
 import  ScheduleScreen from './schedule';
 import  ExercisesScreen from './exercises';
-import { PrimaryColor, HeaderTintColor } from '../colors';
+import { PrimaryColor, HeaderTintColor, InactiveHeaderTintColor } from '../colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const TabStack = TabNavigator({
@@ -12,14 +12,15 @@ const TabStack = TabNavigator({
 },
 {
     navigationOptions: ({navigation}) =>({
-        tabBarIcon: () => {
+        tabBarIcon: ({tintColor}) => {
             const { routeName } = navigation.state;
             const iconName = routeName === "MySchedule" ? "calendar" : "navicon";
-            return (<Icon name={iconName} size={25} color={HeaderTintColor} />);
+            return (<Icon name={iconName} size={25} color={tintColor} />);
         },
     }),
     tabBarOptions: {
         activeTintColor: HeaderTintColor,
+        inactiveTintColor: InactiveHeaderTintColor,
         style: {
             backgroundColor: PrimaryColor,
         },

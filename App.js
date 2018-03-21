@@ -1,17 +1,28 @@
 import React from 'react';
 import MainScreen from './views/mainScreen';
-import { DrawerNavigator } from 'react-navigation';
+import { StackNavigator, DrawerNavigator } from 'react-navigation';
 //import { StyleSheet, } from 'react-native';
 
-const RootStack = DrawerNavigator(
-  {
-      Main: {
-          screen: MainScreen,
-      },
+const RootStack = StackNavigator({
+  Home: {
+    screen: DrawerNavigator(
+    {
+        Main: {
+            screen: MainScreen,
+        },
+    })
   }
-)
+},
+{
+  navigationOptions: {
+    title: 'Make Me Move',
+  }
+});
 
 export default class App extends React.Component {
+  static navigationOptions = {
+      title: 'Make Me Move',
+  };
   render() {
     return <RootStack />;
   }

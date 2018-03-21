@@ -3,6 +3,9 @@ import MainScreen from './views/mainScreen';
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
 //import { StyleSheet, } from 'react-native';
 
+const PrimaryColor = '#FF0000';
+const HeaderTintColor = '#FFFFFF';
+
 const RootStack = StackNavigator({
   Home: {
     screen: DrawerNavigator(
@@ -16,6 +19,10 @@ const RootStack = StackNavigator({
 {
   navigationOptions: {
     title: 'Make Me Move',
+    headerStyle: {
+      backgroundColor: PrimaryColor,
+    },
+    headerTintColor: HeaderTintColor,
   }
 });
 
@@ -27,23 +34,3 @@ export default class App extends React.Component {
     return <RootStack />;
   }
 }
-/*
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-*/

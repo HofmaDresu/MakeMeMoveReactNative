@@ -1,6 +1,15 @@
 import React from 'react';
-import RootStack from './Navigation';
+import MainScreen from './views/mainScreen';
+import { DrawerNavigator } from 'react-navigation';
 //import { StyleSheet, } from 'react-native';
+
+const RootStack = DrawerNavigator(
+  {
+      Main: {
+          screen: MainScreen,
+      },
+  }
+)
 
 export default class App extends React.Component {
   render() {

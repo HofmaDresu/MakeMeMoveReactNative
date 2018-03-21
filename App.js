@@ -1,10 +1,9 @@
 import React from 'react';
 import MainScreen from './views/mainScreen';
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import { PrimaryColor, HeaderTintColor } from './colors';
 //import { StyleSheet, } from 'react-native';
 
-const PrimaryColor = '#FF0000';
-const HeaderTintColor = '#FFFFFF';
 
 const RootStack = StackNavigator({
   Home: {

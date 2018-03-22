@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';// eslint-disable-line
 import { View, Text, } from 'react-native';
 import styles from '../styles';
 

@@ -4,8 +4,8 @@ import styles from '../styles';
 
 export default function LabeledStaticText(props) {
     return (
-        <View>
+        <View style={props.style}>
             <Text style={styles.standardText}>{props.labelText}</Text>
-            <Text style={[styles.standardText, styles.indent]}>{props.valueText}</Text>
+            <Text style={[styles.standardText, styles.dataDisplayIndent]}>{props.valueText}</Text>
         </View>);
 }

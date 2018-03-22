@@ -3,13 +3,7 @@ import MainScreen from './views/mainScreen';
 import { StackNavigator, DrawerNavigator } from 'react-navigation';
 import { PrimaryColor, HeaderTintColor } from './colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { StyleSheet, } from 'react-native';
-
-const styles = StyleSheet.create({
-  headerLeftButton: {
-    marginLeft: 20,
-  },
-})
+import styles from './styles';
 
 const RootStack = StackNavigator({
   Home: {
@@ -30,7 +24,7 @@ const RootStack = StackNavigator({
       },
       headerTintColor: HeaderTintColor,
       headerLeft: (
-          <Icon name="navicon" size={20} color={HeaderTintColor} style={styles.headerLeftButton} onPress={() => navigation.navigate("DrawerToggle")} />
+          <Icon name="navicon" size={20} color={HeaderTintColor} style={styles.indent} onPress={() => navigation.navigate("DrawerToggle")} />
       ),
     };
   },

@@ -1,4 +1,4 @@
-import { PrimaryColor } from './colors';
+import { PrimaryColor, MainBackgroundColor } from './colors';
 import { StyleSheet, } from 'react-native';
 
 export default StyleSheet.create({
@@ -11,6 +11,7 @@ export default StyleSheet.create({
   },
   contentArea: {
       margin:20,
+      backgroundColor: MainBackgroundColor,
   },
   dataDisplay: {
       marginTop:10,
@@ -18,4 +19,7 @@ export default StyleSheet.create({
   dataDisplayIndent: {
       marginLeft: 40,
   },
+  centeredItem: {
+      alignSelf: 'center',
+  }
 })

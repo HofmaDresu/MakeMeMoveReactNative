@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, } from 'react-native';
 import LabeledStaticText from '../components/labeledStaticText';
+import FloatingButton from '../components/floatingButton';
 import styles from '../styles';
 
 export default class MySchedule extends React.Component {
@@ -14,6 +15,7 @@ export default class MySchedule extends React.Component {
             <LabeledStaticText labelText="End Time" valueText="5:00 PM" style={styles.dataDisplay} />
             <LabeledStaticText labelText="Active Days" valueText="Weekdays only" style={styles.dataDisplay} />
             <LabeledStaticText labelText="Reminder Period" valueText="Half Hourly" style={styles.dataDisplay} />
+            <FloatingButton style={styles.centeredItem} title="CHANGE SCHEDULE" />
         </View>);
     }
 }

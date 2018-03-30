@@ -10,11 +10,11 @@ export default class MySchedule extends React.Component {
     };
     render() {
         return (<View style={styles.contentArea}>
-            <LabeledStaticText labelText="Schedule Status" valueText="Started" />
-            <LabeledStaticText labelText="Start Time" valueText="8:30 AM" style={styles.dataDisplay} />
-            <LabeledStaticText labelText="End Time" valueText="5:00 PM" style={styles.dataDisplay} />
-            <LabeledStaticText labelText="Active Days" valueText="Weekdays only" style={styles.dataDisplay} />
-            <LabeledStaticText labelText="Reminder Period" valueText="Half Hourly" style={styles.dataDisplay} />
+            <LabeledStaticText labelText="Schedule Status" valueText={this.props.schedule.isRunning ? "Started" : "Stopped"} />
+            <LabeledStaticText labelText="Start Time" valueText={this.props.schedule.startTime} style={styles.dataDisplay} />
+            <LabeledStaticText labelText="End Time" valueText={this.props.schedule.endTime} style={styles.dataDisplay} />
+            <LabeledStaticText labelText="Active Days" valueText={this.props.schedule.activeDays} style={styles.dataDisplay} />
+            <LabeledStaticText labelText="Reminder Period" valueText={this.props.schedule.reminderPeriod} style={styles.dataDisplay} />
             <FloatingButton style={styles.centeredItem} title="CHANGE SCHEDULE" />
         </View>);
     }

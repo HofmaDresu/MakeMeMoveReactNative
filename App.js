@@ -4,6 +4,12 @@ import { StackNavigator, DrawerNavigator } from 'react-navigation';
 import { PrimaryColor, HeaderTintColor } from './colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
+import reducers from './reducers';
+import {createStore} from 'redux';
+import { Provider } from 'react-redux'
+
+//TODO: Initial state;
+const makeMeMoveStore = createStore(reducers, {});
 
 const RootStack = StackNavigator({
   Home: {
@@ -35,6 +41,6 @@ export default class App extends React.Component {
       title: 'Make Me Move',
   };
   render() {
-    return <RootStack />;
+    return <Provider store={makeMeMoveStore}><RootStack /></Provider>;
   }
 }

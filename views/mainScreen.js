@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {  TabNavigator, TabBarBottom } from 'react-navigation';
-import  ScheduleScreen from './schedule';
+import  ScheduleScreen from '../containers/schedule';
 import  ExercisesScreen from './exercises';
 import { PrimaryColor, HeaderTintColor, InactiveHeaderTintColor } from '../colors';
 import Icon from 'react-native-vector-icons/FontAwesome';
